@@ -19,8 +19,10 @@
             $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
             if ($user) {
                 if(password_varify($password, $user["password"])){
-                    header("Location : index.php");
+                    header("Location: index.php");
                     die();
+                }else{
+                    echo "<div class='alert alert-denger'> Password dose not match </div>";
                 }
 
             } else{
@@ -36,7 +38,7 @@
                 <input type="password" placeholder="Enter Password:" name="password" class="form-control">
             </div>
             <div class="form-btn">
-                 <input type="submit" value="login" class="btn btn-primary">
+                 <input type="submit" value="login" name="login class="btn btn-primary">
 
             </div>
         </form>
