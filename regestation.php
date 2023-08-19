@@ -16,6 +16,7 @@ if (isset($_SESSION["user"])) {
 </head>
 <body>
     <div class="container">
+        <h2  class='alert alert-success'>Facebook - log in or sign up</h2>
         <?php
         if (isset($_POST["submit"])) {
            $fullName = $_POST["fullname"];
